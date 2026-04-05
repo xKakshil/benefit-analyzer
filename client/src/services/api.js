@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://benefit-analyzer.onrender.com'
+  baseURL: 'https://benefit-analyzer.onrender.com/api'
 });
 
 export const uploadClosingDisclosure = async (file) => {
