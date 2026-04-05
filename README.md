@@ -91,6 +91,7 @@ cd-benefit-analyzer/
   .gitigno
 
 ```
+---
 
 # How to Run Locally
 
@@ -143,6 +144,7 @@ Wait for extraction and calculation
 Review the summary cards, tables, formula trace, and extracted values
 
 ```
+---
 ```bash
 Backend API Endpoint
 Upload Closing Disclosure PDF
@@ -166,47 +168,51 @@ Sample Response
   }
 }
 ```
+---
 #Assumptions
 
-Uploaded PDFs follow a standard Closing Disclosure structure
-Missing fields are treated as 0
-Lender Credits are negative values
-Aggregate Adjustment can be negative
-Multiple payoff lines are summed together
-Principal Reduction is extracted directly from the PDF
+-Uploaded PDFs follow a standard Closing Disclosure structure
+-Missing fields are treated as 0
+-Lender Credits are negative values
+-Aggregate Adjustment can be negative
+-Multiple payoff lines are summed together
+-Principal Reduction is extracted directly from the PDF
 
-
+---
 #Challenges Faced
 
-Extracting values from merged PDF text
-Handling inconsistent spacing and line breaks in parsed PDF content
-Distinguishing between similar labels in escrow and prepaid sections
-Extracting the correct Cash to Close value from multiple matches
-Summing multiple payoff lines correctly
-Handling negative values consistently across calculations
+-Extracting values from merged PDF text
+-Handling inconsistent spacing and line breaks in parsed PDF content
+-Distinguishing between similar labels in escrow and prepaid sections
+-Extracting the correct Cash to Close value from multiple matches
+-Summing multiple payoff lines correctly
+-Handling negative values consistently across calculations
+---
 
 #Future Improvements
 
-PDF export support
-Compare multiple CDs side by side
-OCR support for scanned PDFs
-Confidence score per extracted field
-User authentication and saved reports
-CSV export support
-Deployment with cloud storage support
-
+-PDF export support
+-Compare multiple CDs side by side
+-OCR support for scanned PDFs
+-Confidence score per extracted field
+-User authentication and saved reports
+-CSV export support
+-Deployment with cloud storage support
+---
 #Lessons Learned
 
-Regex extraction from PDFs can be unreliable without defensive parsing
-Mortgage documents often contain repeated labels that require careful matching
-Clear UI and transparency are important when showing financial calculations
-Breaking the project into extraction, parsing, and calculation layers improves maintainability
-
+-Regex extraction from PDFs can be unreliable without defensive parsing
+-Mortgage documents often contain repeated labels that require careful matching
+-Clear UI and transparency are important when showing financial calculations
+-Breaking the project into extraction, parsing, and calculation layers improves maintainability
+---
 #Screenshots
 ```bash
 https://drive.google.com/drive/folders/1yWMPcm89AqaEACBXXjj54iRp_wcsu9Yw?usp=drive_link
 ```
+---
 ##Author
+---
 #Kakshil
 
 Built with React, Node.js, Express, Tailwind CSS, and PDF parsing.
